@@ -1,0 +1,327 @@
+/* Option 2: Import via CSS */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #f6bb3b;
+  --secondary-color: #123652;
+  --text-color: #555555;
+  --primary-font: Montserrat;
+  --secondary-font: Roboto;
+  --white-color: white;
+}
+
+input {
+  border: 1px solid var(--secondary-color);
+}
+button {
+  box-shadow: none !important;
+}
+input:focus {
+  box-shadow: none !important;
+  border: 1px solid var(--secondary-color) !important;
+}
+select:focus {
+  box-shadow: none !important;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color) !important;
+}
+
+.form-select:hover {
+  cursor: pointer;
+  background-color: #dfdfdfca;
+}
+.accordion-button{
+  padding: 1rem 8px !important;
+  font-weight: 600 !important;
+}
+
+.accordion-body{
+  padding: 0.8rem 8px !important;
+}
+
+.accordion-button:not(.collapsed)
+{
+  background-color: rgba(18, 54, 82, 0.15) !important;
+  
+}
+p {
+  margin-bottom: 0 !important;
+}
+
+.modal-header {
+  border-bottom: none;
+}
+
+.form-control,
+.btn,
+a {
+  padding: 0.7rem 0.875rem !important;
+}
+a {
+  text-decoration: none;
+}
+/* Custom Css starts from here */
+
+.otoz__logo {
+  width: 10.5rem;
+}
+.nav-item .nav-link {
+  font-size: 0.938rem;
+  font-family: var(--primary-font);
+  width: fit-content;
+}
+
+.btn-outline-button {
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+  color: var(--white-color);
+  font-size: 0.938rem;
+  transition: 0.5s;
+  font-weight: 500;
+  font-family: var(--primary-font);
+}
+.btn-outline-button:hover {
+  background-color: transparent;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color) !important;
+}
+
+.au__otoz_social_links {
+  color: var(--secondary-color);
+  font-family: var(--primary-font);
+  font-size: 0.875rem;
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d5d5d5;
+}
+
+.divider::before,
+.divider::after {
+  flex: 1;
+  content: "";
+  padding: 0.75px;
+  background-color: #d5d5d5;
+  margin-top: 8px;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.sign__in__here {
+  color: var(--primary-color);
+  background: none;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+.au__email_signup::placeholder {
+  font-size: 0.825rem;
+  font-family: var(--primary-font);
+}
+
+.au__search__input {
+  background-color: #eeeef0;
+}
+.au__search__input:focus {
+  border: none !important;
+  background-color: #eeeef0;
+}
+.au__search_container_form {
+  width: 40%;
+  background-color: #eeeef0;
+}
+
+@media screen and (max-width: 767px) {
+  .au__search_container_form {
+    width: 100%;
+  }
+}
+
+.au__forgot_password {
+  color: var(--primary-color);
+  font-size: 0.844rem;
+  font-family: var(--primary-font);
+}
+.au__forgot_password:hover {
+  text-decoration: underline !important;
+}
+
+.au_policies_link {
+  color: var(--primary-color);
+}
+
+.au_policies_text {
+  color: var(--text-color);
+  font-size: 0.844rem;
+  word-wrap: break-word;
+}
+.need__help {
+  color: var(--secondary-color);
+}
+
+/* Main Page Filter */
+
+.au__auction_heading {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+}
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+
+.au__form_select_filters {
+  width: fit-content !important;
+}
+
+@media screen and (max-width: 768px) {
+  .au__form_select_filters {
+    width: 100% !important;
+  }
+  .dropdown-container {
+    width: 100%;
+  }
+
+  .year-range-dropdown.show {
+    width: 100%;
+  }
+}
+
+.year-range-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
+  border: 0.2px solid;
+  margin-top: 0.3rem;
+  background-color: #ffffff;
+}
+
+.year-range-dropdown select {
+  border: 1px solid;
+}
+
+.year-range-dropdown.show {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.au__drop_down_div{
+  border: 1px solid #e2e4e6;
+  /* padding: 0.5rem 1rem; */
+  border-radius: 0.375rem;
+  cursor: pointer;
+}
+
+.dropdown-button {
+  background-color: transparent;
+  padding: 0.38rem 1rem;
+  border: none;
+}
+
+.au__years_dropdown_icon{
+  padding-top: 2.5px;
+  padding-right: 10px;
+}
+.au__years_dropdown_icon i{
+  font-size: 0.75rem;
+  color: black;
+  -webkit-text-stroke: 0.5px black; /* Makes it look bolder */
+}
+/* Img cards */
+
+.au__card_img_top_wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.au__card_img_top_overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 0.9rem;
+}
+
+.au__card_img_top {
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+}
+
+.location {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* .featured-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #333;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  z-index: 1;
+} */
+
+.au__timer {
+  padding-top: 1.5px;
+}
+.au__card_detail_text {
+  font-size: 0.875rem;
+}
+
+.au__star_icon {
+  cursor: pointer;
+}
+
+.au__star_icon.filled {
+  fill: gold;
+}
+
+
+
+/* FAQ Section Page */
+
+.au__faq_section_heading{
+  font-size: 1.75rem;
+  font-weight: 700;
+  font-family: var(--primary-font);
+}
+.au__faq_border{
+  width: 255px;
+  background-color: var(--primary-color);
+  height: 8.5px;
+  border-radius: 3px;
+}
+.au__buyer_questions{
+  margin-top: 3rem;
+}
+
+.au__buyer_questions h1{
+  font-family: var(--secondary-font);
+  font-weight: 700;
+  font-size: 1.98rem;
+}
+.au__buyer_questions h4{
+  font-family: var(--secondary-font);
+  font-weight: 800;
+}
+

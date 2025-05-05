@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- File Style Link -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Otoz AI | Auto Auction</title>
+  </head>
+  <body>
+    <div class="container-fluid container-xxl">
+      <nav
+        class="container-fluid container-xxl navbar navbar-expand-md border-bottom position-sticky top-0 z-3 bg-white"
+      >
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">
+            <img
+              src="./assets/otoz_logo.svg"
+              alt="otoz_ai_logo"
+              class="otoz__logo"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse ms-3"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav me-auto mb-2 mb-md-0 gap-md-3">
+              <li class="nav-item">
+                <a
+                  class="nav-link btn btn-outline-button rounded-5 px-3"
+                  href="#"
+                  >Otoz AI Auction?</a
+                >
+              </li>
+
+              <li class="nav-item d-md-none d-lg-block">
+                <a class="nav-link" aria-current="page" href="./faq.html"
+                  >FAQs</a
+                >
+              </li>
+            </ul>
+            <form
+              class="d-flex me-3 au__search_container_form rounded-2"
+              role="search"
+            >
+              <div class="d-flex align-items-center w-100">
+                <div class="ps-2">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-binoculars"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M3 2.5A1.5 1.5 0 0 1 4.5 1h1A1.5 1.5 0 0 1 7 2.5V5h2V2.5A1.5 1.5 0 0 1 10.5 1h1A1.5 1.5 0 0 1 13 2.5v2.382a.5.5 0 0 0 .276.447l.895.447A1.5 1.5 0 0 1 15 7.118V14.5a1.5 1.5 0 0 1-1.5 1.5h-3A1.5 1.5 0 0 1 9 14.5v-3a.5.5 0 0 1 .146-.354l.854-.853V9.5a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v.793l.854.853A.5.5 0 0 1 7 11.5v3A1.5 1.5 0 0 1 5.5 16h-3A1.5 1.5 0 0 1 1 14.5V7.118a1.5 1.5 0 0 1 .83-1.342l.894-.447A.5.5 0 0 0 3 4.882zM4.5 2a.5.5 0 0 0-.5.5V3h2v-.5a.5.5 0 0 0-.5-.5zM6 4H4v.882a1.5 1.5 0 0 1-.83 1.342l-.894.447A.5.5 0 0 0 2 7.118V13h4v-1.293l-.854-.853A.5.5 0 0 1 5 10.5v-1A1.5 1.5 0 0 1 6.5 8h3A1.5 1.5 0 0 1 11 9.5v1a.5.5 0 0 1-.146.354l-.854.853V13h4V7.118a.5.5 0 0 0-.276-.447l-.895-.447A1.5 1.5 0 0 1 12 4.882V4h-2v1.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5zm4-1h2v-.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm4 11h-4v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5zm-8 0H2v.5a.5.5 0 0 0 .5.5h3a.5.5 0 0 0 .5-.5z"
+                    />
+                  </svg>
+                </div>
+                <div class="w-100">
+                  <input
+                    class="form-control border-0 me-2 au__search__input"
+                    type="search"
+                    placeholder="Search for cars (ex. Ford, Audi, Honda)"
+                    aria-label="Search"
+                  />
+                </div>
+              </div>
+            </form>
+            <!-- Button trigger modal -->
+            <button
+              class="mt-3 mt-md-0 btn btn-outline-button fw-medium"
+              type="submit"
+              data-bs-toggle="modal"
+              data-bs-target="#loginModal"
+            >
+              Sign In
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Sign In Modal -->
+      <div
+        class="modal fade"
+        id="loginModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div
+              class="modal-body d-flex justify-content-center align-items-center flex-column"
+            >
+              <img
+                src="./assets/otoz_logo.svg"
+                alt="otoz_logo"
+                class="otoz__logo"
+              />
+
+              <div
+                class="d-flex justify-content-center align-items-center mt-3 fw-light"
+                style="font-size: 0.85rem"
+              >
+                <p>Need to create an account? &nbsp;</p>
+                <button
+                  class="sign__in__here p-0 m-0 fw-medium"
+                  data-bs-toggle="modal"
+                  data-bs-target="#signupModal"
+                >
+                  Sign Up Here
+                </button>
+              </div>
+              <h5 class="mt-3">Sign In to Otoz.AI Auction</h5>
+
+              <!-- Facebook -->
+              <a
+                href="#"
+                class="mt-3 btn border d-flex justify-content-center align-items-center col-10 au__otoz_social_links"
+              >
+                <img
+                  src="./assets/facebook.svg"
+                  alt="otoz.ai fb_icon"
+                  class="icon"
+                />
+                <p class="text-center mb-0 ms-2">Continue with Facebook</p>
+              </a>
+
+              <!-- Google -->
+              <a
+                href="#"
+                class="mt-3 btn border d-flex justify-content-center align-items-center col-10 au__otoz_social_links"
+              >
+                <img
+                  src="./assets/google.svg"
+                  alt="otoz.ai google_icon"
+                  class="icon"
+                />
+                <p class="text-center mb-0 ms-2">Continue with Google</p>
+              </a>
+
+              <!-- Divider -->
+              <div class="col-10 mt-3 mb-4">
+                <div class="divider fw-light">or</div>
+              </div>
+
+              <div class="col-10">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  class="w-100 form-control au__email_signup"
+                />
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  class="w-100 mt-3 form-control au__email_signup"
+                />
+
+                <!-- Continue -->
+                <button
+                  href="#"
+                  class="mt-3 btn border col-12 py-2 btn-outline-button"
+                >
+                  <p class="text-center mb-0">Sign In</p>
+                </button>
+
+                <!-- Forget Password -->
+                <div class="col-12 mt-2 text-end">
+                  <a href="#" class="au__forgot_password fw-medium"
+                    >Forgot your Password?</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign Up Modal -->
+      <div
+        class="modal fade"
+        id="signupModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div
+              class="modal-body d-flex justify-content-center align-items-center flex-column"
+            >
+              <img
+                src="./assets/otoz_logo.svg"
+                alt="otoz_logo"
+                class="otoz__logo"
+              />
+
+              <div
+                class="d-flex justify-content-center align-items-center mt-3 fw-light"
+                style="font-size: 0.85rem"
+              >
+                <p>Already have an account? &nbsp;</p>
+                <button
+                  class="sign__in__here p-0 m-0 fw-medium"
+                  data-bs-toggle="modal"
+                  data-bs-target="#loginModal"
+                >
+                  Sign In Here
+                </button>
+              </div>
+              <h5 class="mt-3">Sign Up to Otoz.AI Auction</h5>
+
+              <!-- Facebook -->
+              <a
+                href="#"
+                class="mt-3 btn border d-flex justify-content-center align-items-center col-10 au__otoz_social_links"
+              >
+                <img
+                  src="./assets/facebook.svg"
+                  alt="otoz.ai fb_icon"
+                  class="icon"
+                />
+                <p class="text-center mb-0 ms-2">Continue with Facebook</p>
+              </a>
+
+              <!-- Google -->
+              <a
+                href="#"
+                class="mt-3 btn border d-flex justify-content-center align-items-center col-10 au__otoz_social_links"
+              >
+                <img
+                  src="./assets/google.svg"
+                  alt="otoz.ai google_icon"
+                  class="icon"
+                />
+                <p class="text-center mb-0 ms-2">Continue with Google</p>
+              </a>
+
+              <!-- Divider -->
+              <div class="col-10 mt-3 mb-4">
+                <div class="divider fw-light">or</div>
+              </div>
+
+              <div class="col-10">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Email Address"
+                  class="w-100 form-control au__email_signup"
+                />
+
+                <!-- Continue -->
+                <button
+                  href="#"
+                  class="mt-3 btn border col-12 py-2 btn-outline-button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#continueEmailModal"
+                >
+                  <p class="text-center mb-0">Continue</p>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sign Up With Email -->
+      <div
+        class="modal fade"
+        id="continueEmailModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div
+              class="modal-body d-flex justify-content-center align-items-center flex-column"
+            >
+              <img
+                src="./assets/otoz_logo.svg"
+                alt="otoz_logo"
+                class="otoz__logo"
+              />
+              <h5 class="mt-3">Sign Up to Otoz.AI Auction</h5>
+
+              <div class="col-10 mt-3">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Password"
+                  class="w-100 form-control au__email_signup"
+                />
+                <!-- Username  -->
+                <input
+                  type="text"
+                  name="username"
+                  id="username"
+                  placeholder="Username (Public Name others see)"
+                  class="mt-3 w-100 form-control au__email_signup"
+                />
+                <!-- Sign up with Email Button -->
+                <button
+                  href="#"
+                  class="mt-3 btn border col-12 py-2 btn-outline-button"
+                >
+                  <p class="text-center mb-0">Create Account</p>
+                </button>
+                <p class="mt-3 fw-light au_policies_text">
+                  By creating a Cars & Bids account, you are agreeing to our
+                  <a
+                    href="#"
+                    class="p-0 au_policies_link fw-medium text-decoration-underline"
+                  >
+                    Terms of Use
+                  </a>
+                  and
+                  <a
+                    href="#"
+                    class="p-0 au_policies_link fw-medium text-decoration-underline"
+                    >Privacy Policy</a
+                  >. You also agree to receive email and SMS communications from
+                  Cars & Bids and can change your subscription preferences at
+                  any time.
+                </p>
+
+                <div class="mt-3">
+                  <a href="#" class="p-0 need__help fw-medium"> Need help? </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Page Filters Section -->
+      <div
+        class="d-flex align-items-start flex-col flex-column flex-md-row gap-3 ps-md-4 ps-4 pe-3 pe-md-2 mt-3"
+      >
+        <p class="fw-bold au__auction_heading">Auctions</p>
+
+        <div class="dropdown-container">
+          <div
+            class="d-flex justify-content-between au__drop_down_div"
+            id="yearsBtn"
+          >
+            <button class="dropdown-button pe-2">Years</button>
+            <div class="au__years_dropdown_icon">
+              <i class="bi bi-chevron-down"></i>
+            </div>
+          </div>
+          <div id="yearDropdown" class="year-range-dropdown">
+            <select class="form-select au__form_select_filters" id="fromYear">
+              <option selected>From</option>
+              <!-- Example years -->
+              <option value="1900">1900</option>
+              <option value="2000">2000</option>
+              <option value="2020">2020</option>
+            </select>
+            <span>To</span>
+            <select id="toYear" class="form-select au__form_select_filters">
+              <option selected>To</option>
+              <!-- Example years -->
+              <option value="2022">2022</option>
+              <option value="2025">2025</option>
+              <option value="2026">2026</option>
+            </select>
+          </div>
+        </div>
+
+        <select
+          class="form-select au__form_select_filters"
+          aria-label="Default select example"
+        >
+          <option selected>Transmission</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+
+        <select
+          class="form-select au__form_select_filters"
+          aria-label="Default select example"
+        >
+          <option selected>Body Styles</option>
+          <option value="1">One</option>
+          <option value="2">Two</option>
+          <option value="3">Three</option>
+        </select>
+      </div>
+
+      <!-- Card Container Starts -->
+      <div
+        class="mt-2 ps-md-4 ps-4 pe-3 pe-md-2 row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 row-cols-xxl-4 g-2"
+      >
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <a class="au__card_img_top_wrapper d-block p-0" href="/detailPage.html">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/549/52b014bfaa43d40866ba.JPG"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </a>
+            <div class="card-body rounded-bottom-1">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Duplicate this card for more entries -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/3834/7b57e9056ebde8ef918e.JPG"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/5253/71942ed413c30fb9163a.JPG"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/5315/a16963667e7d46402a99.jpg"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/3883/57a31c4cace4f597d67c.JPG"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/4692/f491088d70ce7dac1120.JPG"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/5400/d7200d38810d32560b37.jpg"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/5633/7370d87dbd938463b5fc.jpg"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/5670/8abd15ae578905a50195.jpg"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/5765/0bae4a527e9b15d894f8.jpg"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/5999/ed2c9496bcfb16a154d7.jpg"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/6225/af1a9444645c43a691bf.jpg"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/c51905b0000b639a185eeb080dd879bf007f5604/photos/application/s-XFYoj0V/edit/w2-kl.jpg?t=174530428964"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/c51905b0000b639a185eeb080dd879bf007f5604/photos/application/s-GMhe926/edit/19p5K.jpg?t=174533447732"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/da4b9237bacccdf19c0760cab7aec4a8359010b0/photos/rklMNx7k-i10adM22Ri/edit/ZSeDa.jpg?t=174594597242"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+
+        <!-- Image Cards Starts -->
+        <div class="col d-flex">
+          <div class="card au__cards h-100 w-100">
+            <div class="au__card_img_top_wrapper">
+              <img
+                src="https://media.carsandbids.com/cdn-cgi/image/width=2080,quality=70/c51905b0000b639a185eeb080dd879bf007f5604/photos/application/s-XFYoj0V/edit/w2-kl.jpg?t=174530428964"
+                class="au__card_img_top"
+                alt="au-imgs"
+              />
+              <!-- Tag commented -->
+              <!-- <div class="featured-tag">FEATURED</div> -->
+              <div class="au__card_img_top_overlay">
+                <div class="d-flex">
+                  <div><i class="bi bi-clock"></i></div>
+                  <div id="timer1" class="ps-1 au__timer fw-semibold">
+                    8:00:00
+                  </div>
+                </div>
+                <div>Bid <strong>$115,786</strong></div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <div>
+                  <h5 class="card-title">2019 Acura NSX</h5>
+                </div>
+                <div class="au__watch_list">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-star au__star_icon"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <p class="card-text au__card_detail_text text-secondary mb-1">
+                ~8,100 Miles, 573-hp Turbo-Hybrid V6, Curva Red, Unmodified
+              </p>
+              <p class="location">Reno, NV 89511</p>
+            </div>
+          </div>
+        </div>
+        <!-- Image Card End -->
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"
+  ></script>
+
+  <script src="./script.js"></script>
+</html>
