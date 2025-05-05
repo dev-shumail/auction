@@ -35,19 +35,17 @@ select:focus {
   cursor: pointer;
   background-color: #dfdfdfca;
 }
-.accordion-button{
+.accordion-button {
   padding: 1rem 8px !important;
   font-weight: 600 !important;
 }
 
-.accordion-body{
+.accordion-body {
   padding: 0.8rem 8px !important;
 }
 
-.accordion-button:not(.collapsed)
-{
+.accordion-button:not(.collapsed) {
   background-color: rgba(18, 54, 82, 0.15) !important;
-  
 }
 p {
   margin-bottom: 0 !important;
@@ -66,7 +64,9 @@ a {
   text-decoration: none;
 }
 /* Custom Css starts from here */
-
+.navbar {
+  z-index: 9999 !important;
+}
 .otoz__logo {
   width: 10.5rem;
 }
@@ -217,7 +217,7 @@ a {
   gap: 1rem;
   align-items: center;
 }
-.au__drop_down_div{
+.au__drop_down_div {
   border: 1px solid #e2e4e6;
   /* padding: 0.5rem 1rem; */
   border-radius: 0.375rem;
@@ -230,11 +230,11 @@ a {
   border: none;
 }
 
-.au__years_dropdown_icon{
+.au__years_dropdown_icon {
   padding-top: 2.5px;
   padding-right: 10px;
 }
-.au__years_dropdown_icon i{
+.au__years_dropdown_icon i {
   font-size: 0.75rem;
   color: black;
   -webkit-text-stroke: 0.5px black; /* Makes it look bolder */
@@ -296,32 +296,29 @@ a {
   fill: gold;
 }
 
-
-
 /* FAQ Section Page */
 
-.au__faq_section_heading{
+.au__faq_section_heading {
   font-size: 1.75rem;
   font-weight: 700;
   font-family: var(--primary-font);
 }
-.au__faq_border{
+.au__faq_border {
   width: 255px;
   background-color: var(--primary-color);
   height: 8.5px;
   border-radius: 3px;
 }
-.au__buyer_questions{
+.au__buyer_questions {
   margin-top: 3rem;
 }
 
-.au__buyer_questions h1{
+.au__buyer_questions h1 {
   font-family: var(--secondary-font);
   font-weight: 700;
   font-size: 1.98rem;
 }
-.au__buyer_questions h4{
+.au__buyer_questions h4 {
   font-family: var(--secondary-font);
   font-weight: 800;
 }
-
