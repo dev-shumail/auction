@@ -1,15 +1,60 @@
 const yearsBtn = document.getElementById("yearsBtn");
 const yearDropdown = document.getElementById("yearDropdown");
+const fromYearSelect = document.getElementById("fromYear");
+const toYearSelect = document.getElementById("toYear");
+const dropdownButton = document.querySelector(".dropdown-button");
 
-yearsBtn.addEventListener("click", () => {
+// Toggle dropdown on click
+yearsBtn.addEventListener("click", (e) => {
+  e.stopPropagation(); // Prevent closing dropdown immediately
   yearDropdown.classList.toggle("show");
 });
 
+// Close dropdown when clicking outside
 document.addEventListener("click", function (e) {
   if (!yearsBtn.contains(e.target) && !yearDropdown.contains(e.target)) {
     yearDropdown.classList.remove("show");
   }
 });
+
+// When a from year is selected, default toYear to current year (if not already set)
+fromYearSelect.addEventListener("change", function () {
+  const fromYear = fromYearSelect.value;
+
+  if (toYearSelect.value === "To") {
+    const currentYear = new Date().getFullYear();
+
+    // Add current year to "to" dropdown if missing
+    let exists = [...toYearSelect.options].some(
+      (opt) => opt.value === currentYear.toString()
+    );
+    if (!exists) {
+      const option = document.createElement("option");
+      option.value = currentYear;
+      option.textContent = currentYear;
+      toYearSelect.appendChild(option);
+    }
+
+    toYearSelect.value = currentYear;
+  }
+
+  updateButtonText();
+});
+
+toYearSelect.addEventListener("change", function () {
+  updateButtonText();
+});
+
+// Show selected years in the dropdown button
+function updateButtonText() {
+  const from = fromYearSelect.value;
+  const to = toYearSelect.value;
+  if (from !== "From" && to !== "To") {
+    dropdownButton.textContent = `${from}-${to}`;
+  } else {
+    dropdownButton.textContent = "Years";
+  }
+}
 
 // Timer
 function startCountdown(id, duration) {
