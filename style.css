@@ -67,6 +67,9 @@ a {
 .navbar {
   z-index: 999 !important;
 }
+.navbar-brand {
+  padding-left: 0 !important;
+}
 .otoz__logo {
   width: 10.5rem;
 }
@@ -369,4 +372,55 @@ footer {
 .term_links {
   font-size: 13px !important;
   font-family: var(--primary-font);
+}
+
+/* Detail Page Start*/
+
+.au__auction_car_name {
+  font-family: var(--primary-font);
+  font-size: 1.75rem;
+}
+.au__auction_car_para {
+  color: var(--text-color);
+  font-family: var(--primary-font);
+  font-size: 0.938rem;
+  font-weight: 500;
+}
+
+.au__auction_cover_pic {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+#au__overflow__main_cover {
+  overflow: auto; /* or scroll, if needed */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
+  height: 250px;
+}
+
+#au__overflow__main_cover::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+@media screen and (min-width: 450px) {
+ 
+  #au__overflow__main_cover{
+    height: 300px;
+  }
+}
+
+@media screen and (min-width: 600px){
+  
+  #au__overflow__main_cover{
+    height: 350px;
+  }
+}
+@media screen and (min-width: 850px){
+  
+  #au__overflow__main_cover{
+    height: 450px;
+  }
 }
