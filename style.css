@@ -587,7 +587,6 @@ footer {
 }
 #allPhotosModal .modal-content {
   background: #252525;
-  border-radius: 1rem;
   border: none;
 }
 #allPhotosModal .modal-header {
@@ -612,8 +611,12 @@ footer {
 }
 
 @media (min-width: 576px) {
+  .modal {
+    --bs-modal-margin: 0 !important;
+    --bs-modal-border-radius: 0 !important;
+  }
   .modal-dialog {
-    max-width: 98%;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
   }
