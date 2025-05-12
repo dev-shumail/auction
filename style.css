@@ -623,3 +623,18 @@ footer {
     margin-left: auto;
   }
 }
+
+/* Payment Modal Custom Styles */
+.au__bidding_credit_heading {
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 1.85rem;
+}
+.au__bidding_credit_para {
+  font-family: var(--secondary-font);
+  font-weight: 300;
+  font-size: 0.95rem;
+}
+
+

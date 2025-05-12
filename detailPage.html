@@ -620,7 +620,11 @@
               </div>
             </div>
             <div class="col-3 au__bidding_place_button me-3">
-              <button class="w-100">
+              <button
+                class="w-100"
+                data-bs-toggle="modal"
+                data-bs-target="#paymentModal"
+              >
                 <span class="d-none d-sm-inline">Place </span>Bid
               </button>
             </div>
@@ -682,6 +686,108 @@
         </div>
 
         <div style="height: 1000px"></div>
+      </div>
+      <div
+        class="modal fade"
+        id="paymentModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+      >
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <h3 class="text-center au__bidding_credit_heading">
+                Register to Bid
+              </h3>
+              <p class="mt-3 au__bidding_credit_para">
+                We require a valid credit card on file before you can bid.
+                Winning bidders pay a 5% buyer’s fee to Cars & Bids on top of
+                the winning bid amount. The minimum buyer’s fee is $250, and the
+                maximum is $7,500.
+              </p>
+              <p class="my-3 au__bidding_credit_para">
+                Bids are binding, so please bid wisely!
+              </p>
+              <h6>Credit Card Information</h6>
+
+              <div class="my-3 col-12 col-md-11">
+                <label for="nameOnCard" class="form-label">Name on Card</label>
+                <input type="text" class="form-control" id="nameOnCard" />
+              </div>
+              <div class="my-3 col-12 col-md-7">
+                <label for="zipCode" class="form-label"
+                  >Zip or Postal Code</label
+                >
+                <input type="text" class="form-control" id="zipCode" />
+              </div>
+              <div class="my-3 col-12 col-md-7">
+                <label for="creditCardNumber" class="form-label"
+                  >Credit Card Number</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="creditCardNumber"
+                  placeholder="1234 1234 1234 1234"
+                />
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="exiprationCards" class="form-label"
+                      >Expiration Date</label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exiprationCards"
+                      placeholder="MM / YY"
+                    />
+                  </div>
+                </div>
+                <div class="col-12 col-md-6">
+                  <div class="mb-3">
+                    <label for="cvv" class="form-label">CVC</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="cvv"
+                      placeholder="123"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <h6 class="mt-2">Contact Information</h6>
+              <p class="au__bidding_credit_para mt-3">
+                Phone Number (in the event you win an auction)
+              </p>
+              <div class="mb-3 mt-1">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="floatingInput"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <button class="btn-outline-button py-2 px-4 w-100 rounded">
+                Register to Bid
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </body>
