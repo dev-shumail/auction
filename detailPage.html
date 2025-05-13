@@ -576,20 +576,6 @@
                         alt="car photo"
                       />
                     </div>
-                    <div class="col-6 col-md-4 col-xl-3">
-                      <img
-                        src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/3834/7b57e9056ebde8ef918e.JPG"
-                        class="img-fluid rounded au__all-photos-img"
-                        alt="car photo"
-                      />
-                    </div>
-                    <div class="col-6 col-md-4 col-xl-3">
-                      <img
-                        src="https://s3.ap-northeast-1.amazonaws.com/otoz.ai/cars/3834/7b57e9056ebde8ef918e.JPG"
-                        class="img-fluid rounded au__all-photos-img"
-                        alt="car photo"
-                      />
-                    </div>
                   </div>
                 </div>
               </div>
@@ -601,21 +587,30 @@
         <div class="au__sticky_bidding_bar">
           <div class="d-flex align-items-center">
             <div class="col-9 au__bidding_info_bar">
-              <div class="d-flex align-items-center">
-                <div class="d-flex align-items-end">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="d-flex">
                   <i class="bi bi-clock"></i>
-                  <span class="d-none d-sm-inline pb-0">Time Left: </span>
-                  <span class="fw-medium">02:00</span>
+                  <p class="d-none d-sm-flex">Time Left:</p>
+                  <p class="fw-medium">6:42:15</p>
                 </div>
-                <div class="d-flex align-items-center ps-sm-2">
-                  <i class="bi bi-currency-dollar"></i>
-                  <span>
-                    <span class="d-none d-sm-inline">Current</span> Bid:
+                <div class="d-flex">
+                  <span class="d-none d-sm-flex">
+                    <i class="bi bi-arrow-up"></i>
                   </span>
-                  <span class="fw-medium">$115,786</span>
+                  <p class="">
+                    <span class="d-none d-sm-inline">High</span> Bid:
+                  </p>
+                  <p>$123,500</p>
                 </div>
-                <div class="d-none d-md-flex align-items-center">
-                  <span class="fw-medium ps-3"># Bids <strong>26</strong></span>
+                <div class="d-none d-lg-flex">
+                  <i class="bi bi-database-gear"></i>
+                  <p class="d-none d-md-flex">Start Price:</p>
+                  <p class="ps-1 fw-medium">$123,000</p>
+                </div>
+                <div class="d-none d-md-flex">
+                  <p>#</p>
+                  <p class="d-none d-md-flex">Bid:</p>
+                  <p class="ps-1 fw-medium">20</p>
                 </div>
               </div>
             </div>
@@ -629,63 +624,73 @@
               </button>
             </div>
           </div>
+          <div class="au__ending_soon_time d-flex">
+            <p class="ps-2 ps-md-3 mt-3 d-none d-sm-block">
+              This auction ends in:
+            </p>
+            <p class="mt-3 ps-1">
+              <span class="ps-1 d-sm-none">Ends In:</span> 13th at 10:36 PM
+            </p>
+          </div>
 
           <div class="table-responsive">
             <table
-              class="w-100 table table-bordered mt-3 au__car-details-table"
+              class="w-100 table table-bordered mt-3 au__car-details-table responsive-table"
             >
               <tbody>
                 <tr>
                   <th>Make</th>
-                  <td><a href="#" class="ps-0">BMW</a></td>
+                  <td data-label="Make"><a href="#" class="ps-0">BMW</a></td>
                   <th>Engine</th>
-                  <td>5.0L V10</td>
+                  <td data-label="Engine">5.0L V10</td>
                 </tr>
                 <tr>
                   <th>Model</th>
-                  <td><a href="#" class="ps-0">E63/E64 M6</a></td>
+                  <td data-label="Model">
+                    <a href="#" class="ps-0">E63/E64 M6</a>
+                  </td>
                   <th>Drivetrain</th>
-                  <td>Rear-wheel drive</td>
+                  <td data-label="Drivetrain">Rear-wheel drive</td>
                 </tr>
                 <tr>
                   <th>Mileage</th>
-                  <td>47,400</td>
+                  <td data-label="Mileage">47,400</td>
                   <th>Transmission</th>
-                  <td>Manual (6-Speed)</td>
+                  <td data-label="Transmission">Manual (6-Speed)</td>
                 </tr>
                 <tr>
                   <th>VIN</th>
-                  <td>WBSEH93597CY23876</td>
+                  <td data-label="VIN">WBSEH93597CY23876</td>
                   <th>Body Style</th>
-                  <td>Coupe</td>
+                  <td data-label="Body Style">Coupe</td>
                 </tr>
                 <tr>
                   <th>Title Status</th>
-                  <td>Clean (NY)</td>
+                  <td data-label="Title Status">Clean (NY)</td>
                   <th>Exterior Color</th>
-                  <td>Silverstone Metallic</td>
+                  <td data-label="Exterior Color">Silverstone Metallic</td>
                 </tr>
                 <tr>
                   <th>Location</th>
-                  <td><a href="#" class="ps-0">Delray Beach, FL 33483</a></td>
+                  <td data-label="Location">
+                    <a href="#" class="ps-0">Delray Beach, FL 33483</a>
+                  </td>
                   <th>Interior Color</th>
-                  <td>Sepang</td>
+                  <td data-label="Interior Color">Sepang</td>
                 </tr>
                 <tr>
                   <th>Seller</th>
-                  <td>
+                  <td data-label="Seller">
                     <b>MarcGuisto</b>
                     <a href="#" class="ps-0">Contact</a>
                   </td>
                   <th>Seller Type</th>
-                  <td>Dealer</td>
+                  <td data-label="Seller Type">Dealer</td>
                 </tr>
               </tbody>
             </table>
           </div>
         </div>
-
-        <div style="height: 1000px"></div>
       </div>
       <div
         class="modal fade"
@@ -713,8 +718,8 @@
               </h3>
               <p class="mt-3 au__bidding_credit_para">
                 We require a valid credit card on file before you can bid.
-                Winning bidders pay a 5% buyer’s fee to Cars & Bids on top of
-                the winning bid amount. The minimum buyer’s fee is $250, and the
+                Winning bidders pay a 5% buyer's fee to Cars & Bids on top of
+                the winning bid amount. The minimum buyer's fee is $250, and the
                 maximum is $7,500.
               </p>
               <p class="my-3 au__bidding_credit_para">
@@ -789,7 +794,176 @@
           </div>
         </div>
       </div>
+      
     </div>
+    <footer class="pt-5 pb-3 mt-3">
+      <div class="container-fluid container-xxl">
+        <div class="row ps-3">
+          <div class="col-12 col-sm-6">
+            <img
+              src="./assets/otoz_logo.svg"
+              alt="otoz.ai"
+              class="otoz__logo"
+            />
+
+            <h4 class="mt-4 au__footer__headings mb-0">Japan Office</h4>
+            <p class="m-0 au__footer_desc">
+              2-10-13-301, Minami Azabu, Minato-ku, Tokyo, Japan, 106-0047
+            </p>
+            <h4 class="mt-4 au__footer__headings mb-0">USA Office</h4>
+            <p class="m-0 au__footer_desc">
+              1880, 166 Geary St. 15th Floor Suite # 92, CA, San Francisco, US,
+              94108
+            </p>
+            <h4 class="mt-4 au__footer__headings mb-0">Pakistan Office</h4>
+            <p class="m-0 au__footer_desc">
+              13-N, 2nd Floor Gulberg II, Lahore, Pakistan
+            </p>
+
+            <p class="mt-1 au__footer_desc">0423-2084549</p>
+
+            <h4 class="mt-4 au__footer__headings mb-0">Follow Us</h4>
+            <div class="d-flex gap-2 mt-2">
+              <a href="#" class="au__social_icon_links p-0">
+                <img src="./assets/social.svg" alt="facebook" />
+              </a>
+              <a href="#" class="au__social_icon_links p-0">
+                <img src="./assets/instagram.svg" alt="facebook" />
+              </a>
+              <a href="#" class="au__social_icon_links p-0">
+                <img src="./assets/linkedin.svg" alt="facebook" />
+              </a>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6">
+            <div class="row">
+              <div class="col-12 col-md-6">
+                <h4 class="au__footer__headings mb-0 mt-3 mt-md-0">
+                  About Otoz.AI
+                </h4>
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 au__footer_links fw-medium"
+                >
+                  Buying Procedure
+                </a>
+
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 pt-0 au__footer_links fw-medium"
+                >
+                  Export information
+                </a>
+              </div>
+              <div class="col-12 col-md-6">
+                <h4 class="au__footer__headings mb-0 mt-3 mt-md-0">
+                  Our Services
+                </h4>
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 au__footer_links fw-medium"
+                >
+                  Storage Services
+                </a>
+
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 pt-0 au__footer_links fw-medium"
+                >
+                  Contact Us
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 mt-3">
+                <h4 class="au__footer__headings mb-0">Resources</h4>
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 au__footer_links fw-medium"
+                >
+                  Privacy Policy
+                </a>
+
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 pt-0 au__footer_links fw-medium"
+                >
+                  Cookie Policy
+                </a>
+
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 pt-0 au__footer_links fw-medium"
+                >
+                  Security Export Control
+                </a>
+              </div>
+
+              <div class="col-12 col-md-6 mt-3">
+                <h4 class="au__footer__headings mb-0">Extras</h4>
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 au__footer_links fw-medium"
+                >
+                  Global Offices
+                </a>
+
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 pt-0 au__footer_links fw-medium"
+                >
+                  Terms & Conditions
+                </a>
+
+                <a
+                  href="javascript:(void)"
+                  class="d-block ps-0 pb-0 pt-0 au__footer_links fw-medium"
+                >
+                  FAQs
+                </a>
+              </div>
+
+              <!-- Mobile App -->
+
+              <div class="col-12 mt-3">
+                <h4 class="au__footer__headings mb-0">
+                  Get More With Our Mobile App
+                </h4>
+                <p class="au__footer_mobile_desc fw-medium">
+                  Your perfect car is just a tap away – Download the App today!
+                </p>
+
+                <div class="d-flex">
+                  <a href="#" class="ps-0">
+                    <img src="./assets/playStore.svg" alt="playStore" />
+                  </a>
+                  <a href="#" class="ps-0">
+                    <img src="./assets/appStore.svg" alt="appStore" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row ps-3 pe-3 mt-3 d-flex align-items-end">
+          <div class="col-12 col-sm-7">
+            <p class="au__all_rights_reserved">
+              © 2024-2025 Otoz.ai All rights reserved.
+            </p>
+          </div>
+          <div class="col-12 col-sm-5 text-start text-sm-end pe-3">
+            <a href="javascript:(void)" class="au__footer_links term_links p-0"
+              >Privacy Policy</a
+            >
+            <span class="au__footer_links">|</span>
+            <a href="javascript:(void)" class="au__footer_links term_links p-0"
+              >Terms of Use</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
